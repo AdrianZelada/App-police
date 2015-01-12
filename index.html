@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css"/>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" href="css/jqm.slidemenu.css" />
+    <script src="js/jqm.slidemenu.js"></script>
+    <script src="js/Controller.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<div data-role="header">
+<div id="slidemenu">
+    <div id="profile" >
+        <img style="margin-left:20px" src="css/logo.png">
+           <p>>AppPolice</p>            
+    </div>
+    <h3>MENU</h3>
+    <ul>
+        <li><a href="#main_page"><img src="">Inicio</a></li>
+    </ul>
+    <h3>OPCIONE</h3>
+    <ul>
+        <li><a href="#another_page3" ><img src="">Llenar Formulario</a></li>
+        <li><a id="fo" href="#formulario"><img src="">Formulario</a></li>
+        <li><a id="sends" href="#sends"><img src="">Formularios Enviados</a></li>
+        <li><a href="#Settings"><img src="">Configuracion</a></li>
+    </ul>
+</div>
+</div>
+<div data-role="page" id="main_page" data-theme="b" data-transition="turn">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+        <a href="#" data-slidemenu="#slidemenu" data-slideopen="false"  data-corners="false" >Menu</a>
+        <h1>AppPolice</h1>
+    </div>
+
+    <div data-role="content">
+        <h4 style="text-align:center;">Control de Accidentes</h4>
+        <img style="margin:0 auto; display:block" src="css/logo1.png">
+        <br>
+        <p>
+            El presente proyecto de grado trata de la automatizacion del acopio de informacion en accidentes de transito con danos materiales para un mejor resguardo de la informacion en el departamento de la Policia, Seccion-Transito
+        </p>
+    </div>
+</div>
+<div data-role="page" id="another_page3" data-theme="b" data-transition="turn">
+    <div data-role="header" style="overflow:hidden;">
+        <a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-corners="false" data-iconpos="notext">Menu</a>
+        <h4 style="text-align:center;">Formulario</h4>
+        <div data-role="tabs">
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li><a href="#one" data-ajax="false" class="ui-btn-active">1</a></li>
+                    <li><a href="#two" data-ajax="false">2</a></li>
+                    <li><a href="#three" data-ajax="false">3</a></li>
+                    <li><a href="#four" data-ajax="false">4</a></li>
+                    <li><a href="#five" data-ajax="false">5</a></li>
+                </ul>
+            </div>
+            <div id="one" class="ui-body-d ui-content ">
+                <h4 style="text-align:center;"> Datos del Accidente</h4>
+                    <label>Numero de Vehiculos Implicados</label>
+                    <input type="text" name="Nvehiculo" id="Nvehiculo">
+                    <label for="select-choice-0" class="select">Zona</label>
+                    <select name="select-choice-0" id="select-choice-0">
+                        <option value="Ascendente">Ascendente</option>
+                        <option value="Descendente">Descendente</option>
+                        <option value="Ambos">Ambos</option>
+                        <option value="NoEspecificado">No Especificado</option>
+                    </select>
+                <label>Carretera</label>
+                <input type="text" name="carretera" id="carretera">
+                <label>Kilometros</label>
+                <input type="text" name="kilometros" id="kilometros">
+                <label>Denominacion</label>
+                <input type="text" name="denominacion" id="denominacion">
+            </div>
+            <div id="two" class="ui-body-d ui-content ">
+                <h4 style="text-align:center;"> Datos del Accidente</h4>
+                <label for="select-choice-1" class="select">Sentido</label>
+                <select name="select-choice-1" id="select-choice-1">
+                    <option value="Carretera">Carretera</option>
+                    <option value="Urbana">Urbana</option>
+                    <option value="Travesia">Travesia</option>
+                    <option value="Variente">Variente</option>
+                </select>
+                <label for="select-choice-2" class="select">Luminosidad</label>
+                <select name="select-choice-2" id="select-choice-2">
+                    <option value="Edificio">Edificio</option>
+                    <option value="Configuracion del Terreno">Configuracion del Terreno</option>
+                    <option value="Factores Atmosfericos">Factores Atmosfericos</option>
+                    <option value="Vehiculo Parado">Vehiculo Parado</option>
+                </select>
+                <p>Tipo de Accidente</p>
+                <fieldset data-role="controlgroup" id="TipoAc" data-type="horizontal" data-mini="true">
+                    <legend>Colision de</legend><center>
+                    <input type="radio" name="tipoAc1" id="radio-choice-1" value="Frontal" checked="checked">
+                    <label for="radio-choice-1">Frontal</label>
+                    <input type="radio" name="tipoAc1" id="radio-choice-2" value="Frontal Lateral">
+                    <label for="radio-choice-2">Frontal Lateral</label>
+                </center>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Colision de</legend>
+                    <input type="radio" name="tipoAc2" id="radio-choice-c" value="Vehiculo estacionado" checked="checked">
+                    <label for="radio-choice-c">Vehiculo estacionado</label>
+                    <input type="radio" name="tipoAc2" id="radio-choice-d" value="Averiado">
+                    <label for="radio-choice-d">Averiado</label>
+                </fieldset>
+            </div>
+            <div id="three" class="ui-body-d ui-content ">
+                <h4 style="text-align:center;">Circunstancias del Peaton</h4>
+                <label>Nombre del Peaton</label>
+                <input type="text" name="Nombre" id="Nombre">
+                <label>Apellido del Peaton</label>
+                <input type="text" name="Apellido" id="Apellido">
+                <label>Direccion</label>
+                <input type="text" name="Direccion" id="Direccion">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Sexo</legend>
+                    <input type="radio" name="SexoPe" id="radio-choice-e" value="Mujer" checked="checked">
+                    <label for="radio-choice-e">Mujer</label>
+                    <input type="radio" name="SexoPe" id="radio-choice-f" value="Hombre">
+                    <label for="radio-choice-f">Hombre</label>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Peaton Presunto Responsable</legend>
+                    <input type="radio" name="ResponsablePe" id="radio-choice-g" value="choice-1" checked="checked">
+                    <label for="radio-choice-g">Si</label>
+                    <input type="radio" name="ResponsablePe" id="radio-choice-h" value="choice-2">
+                    <label for="radio-choice-h">No</label>
+                </fieldset>
+            </div>
+
+            <div id="four" class="ui-body-d ui-content ">
+                <h4 style="text-align:center;">Caracteristicas del Vehiculo</h4>
+                <label>Matricula</label>
+                <input type="text" name="Matricula" id="Matricula">
+                <label>Marca</label>
+                <input type="text" name="Marca" id="Marca">
+                <label>Modelo</label>
+                <input type="text" name="Modelo" id="Modelo">
+                <label>Numero de Ocupantes</label>
+                <input type="text" name="Ocupantes" id="Ocupantes">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Seguro Obligatorio</legend>
+                    <input type="radio" name="SeguroOb" id="radio-choice-i" value="Si" checked="checked">
+                    <label for="radio-choice-i">Si</label>
+                    <input type="radio" name="SeguroOb" id="radio-choice-j" value="No">
+                    <label for="radio-choice-j">No</label>
+                </fieldset>
+                <label>Compañia Aseguradora</label>
+                <input type="text" name="ComAseguradora" id="ComAseguradora">
+                <label>Numero de Poliza</label>
+                <input type="text" name="Npoliza" id="Npoliza">
+                <label></label>
+            </div>
+            <div id="five" class="ui-body-d ui-content ">
+                <h4 style="text-align:center;">Circunstancias del conductor </h4>
+                <label>Nombre</label>
+                <input type="text" name="" id="Cnombre">
+                <label>Apellido</label>
+                <input type="text" name="" id="Capellido">
+
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Sexo</legend>
+                    <input type="radio" name="SexoCon" id="radio-choice-k" value="Mujer" checked="checked">
+                    <label for="radio-choice-k">Mujer</label>
+                    <input type="radio" name="SexoCon" id="radio-choice-l" value="Hombre">
+                    <label for="radio-choice-l">Hombre</label>
+                </fieldset>
+
+                <label>Clase de Permiso</label>
+                <input type="text" name="CPermiso" id="CPermiso">
+
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Conductor Presunto Responsable</legend>
+                    <input type="radio" name="ResponsableCon" id="radio-choice-m" value="Si" checked="checked">
+                    <label for="radio-choice-m">Si</label>
+                    <input type="radio" name="ResponsableCon" id="radio-choice-n" value="No">
+                    <label for="radio-choice-n">No</label>
+                </fieldset>
+
+                <a href="#formulario" class="ui-btn-b"><button id="postJson">Ver Reporte</button> 
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="formulario" data-theme="b" data-transition="turn">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+        <a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-corners="false" data-iconpos="notext">Menu</a>
+        <h1>Formulario</h1>
+    </div>
+
+    <div data-role="content">
+        <div id="formu" class="ui-grid-a"></div>
+    </div>           
+        <a href="#main_page" class="ui-btn-b" id="Send"><button>Enviar Formulario</button></a>           
+</div>
+    
+<div data-role="page" id="Settings" data-theme="b" data-transition="turn">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+        <a href="" data-slidemenu="#slidemenu" data-slideopen="false" data-corners="false" data-iconpos="notext">Menu</a>
+        <h1>Usuario</h1>
+    </div>
+    <div data-rol="content" class="ui-body-d ui-content ">
+        <h4 style="text-align:center;">Datos del Usuario </h4>
+         <br>
+        <label>Nombre Usuario</label>
+        <input type="text" name="" id="NomUsuario">
+    
+        <label>Codigo Usuario</label>
+        <input type="text" name="" id="CodUsuario">
+    
+        <label>Email Usuario</label>
+        <input type="email" name="" id="EmailUsuario">
+        
+        <label>Direccion Servidor</label>
+        <input type="email" name="" id="Direccion">
+        <a href="#main_page" class="ui-btn-b" id="save"><button>Guardar</button></a>
+    </div>	
+</div>
+
+    
+<div data-role="page" id="sends" data-theme="b" data-transition="turn">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+        <a href="" data-slidemenu="#slidemenu" data-slideopen="false" data-corners="false" data-iconpos="notext">Menu</a>
+        <h1>Usuario</h1>
+    </div>
+    <div data-rol="content" class="ui-body-d ui-content ">
+        <h4 style="text-align:center;">Formularios Enviados</h4>
+         <br>
+        <div id="ContentSend">
+            
+        </div>
+        <a href="#main_page" class="ui-btn-b" id="save"><button>Guardar</button></a>
+    </div>	
+</div>    
+    
+<script type="text/javascript">
+    document.addEventListener('deviceready', function () {
+        navigator.splashscreen.hide();
+    }, false);
+</script>
+</body>
+</html>

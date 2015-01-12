@@ -1,0 +1,14 @@
+h1{
+    display: none;
+    margin:0 auto;
+}
+label{
+    margin-left: 10px;
+}
+.classGrid{
+    background: #262C3A !important;
+    -webkit-box-shadow: 3px 0px 5px -2px #32394A;
+    box-shadow: 3px 0px 5px -2px #32394A;
+    color:#ffffff;
+    border-radius: 4px;
+}
